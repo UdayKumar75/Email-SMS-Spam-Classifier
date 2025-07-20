@@ -1,6 +1,6 @@
 # 📩 SMS/Email Spam Classifier
 
-🚀 [**Live Demo**](https://your-render-app-url.onrender.com) – Click to try it out!
+🚀 [**Live Demo**]([https://your-render-app-url.onrender.com](https://email-sms-spam-classifier-o6ot.onrender.com/)) – Click to try it out!
 
 ---
 
