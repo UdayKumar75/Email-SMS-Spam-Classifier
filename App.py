@@ -10,6 +10,11 @@ model = pkl.load(open('model.pkl','rb'))
 
 ps = PorterStemmer()
 
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt_tab')
+
 def transform_text(text):
     text = text.lower()
     text = nltk.word_tokenize(text)
