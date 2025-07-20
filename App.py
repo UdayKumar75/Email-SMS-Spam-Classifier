@@ -10,10 +10,11 @@ model = pkl.load(open('model.pkl','rb'))
 
 ps = PorterStemmer()
 
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt_tab')
+for resource in ['punkt_tab', 'stopwords']:
+    try:
+        nltk.data.find(f'tokenizers/{resource}' if resource == 'punkt' else f'corpora/{resource}')
+    except LookupError:
+        nltk.download(resource)
 
 def transform_text(text):
     text = text.lower()
